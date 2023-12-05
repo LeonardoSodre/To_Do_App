@@ -23,6 +23,16 @@ function descompletarTarefa(id){
 
 }
 
+function excluirTarefa(id){
+    fetch("http://localhost:3000/excluir",{
+        method:"POST",
+        headers:{
+            'Content-type': 'application/json',
+        },
+            body: JSON.stringify({id}) 
+        
+    })
+}
 
 
 function alterarTema(){
