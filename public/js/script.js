@@ -10,7 +10,18 @@ function completarTarefa(id){
     window.location.reload()
 }
 
+function descompletarTarefa(id){
+    fetch("http://localhost:3000/descompletar",{
+        method:"POST",
+        headers:{
+            'Content-type': 'application/json',
+        },
+            body: JSON.stringify({id}) 
+        
+    })
+    window.location.reload()
 
+}
 
 
 
